@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "e3a9b40d-0a41-4cae-bb4f-8ad112660774",
+		"name": "blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38758892"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"somu\",\r\n  \"email\": \"somu@example.com\",\r\n  \"password\": \"srb123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI4NGNiN2I0MDdmYmQ0N2U3MzNkZDgiLCJuYW1lIjoic29tdSIsImlhdCI6MTc0NzQ3MTcwOCwiZXhwIjoxNzQ3NTU4MTA4fQ.0D9O9l1seo_fq5ODNTwsNGaHH30vZ-yTnWQjHpk5edM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"somu@example.com\",\r\n  \"password\": \"srb123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI4NGNiN2I0MDdmYmQ0N2U3MzNkZDgiLCJuYW1lIjoic29tdSIsImlhdCI6MTc0NzQ3MTcwOCwiZXhwIjoxNzQ3NTU4MTA4fQ.0D9O9l1seo_fq5ODNTwsNGaHH30vZ-yTnWQjHpk5edM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Blog Title\",\r\n  \"category\": \"Travel\",\r\n  \"content\": \"This is a travel blog\",\r\n  \"image\": \"https://plus.unsplash.com/premium_photo-1664472706956-42f42184f7a9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhdmVsJTIwYmxvZ2dlcnxlbnwwfHwwfHx8MA%3D%3D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI4NGNiN2I0MDdmYmQ0N2U3MzNkZDgiLCJuYW1lIjoic29tdSIsImlhdCI6MTc0NzQ3MTcwOCwiZXhwIjoxNzQ3NTU4MTA4fQ.0D9O9l1seo_fq5ODNTwsNGaHH30vZ-yTnWQjHpk5edM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/blogs/68285853675bba5331f25a95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"blogs",
+						"68285853675bba5331f25a95"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI4NGNiN2I0MDdmYmQ0N2U3MzNkZDgiLCJuYW1lIjoic29tdSIsImlhdCI6MTc0NzQ3MTcwOCwiZXhwIjoxNzQ3NTU4MTA4fQ.0D9O9l1seo_fq5ODNTwsNGaHH30vZ-yTnWQjHpk5edM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/blogs/68285853675bba5331f25a95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"blogs",
+						"68285853675bba5331f25a95"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
