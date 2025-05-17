@@ -18,7 +18,7 @@ This is the backend API for a full-stack Blogging Application built using **Node
 ---
 
 ## 📁 Project Structure
-
+```
 .
 ├── config/
 │   └── db.js
@@ -38,8 +38,7 @@ This is the backend API for a full-stack Blogging Application built using **Node
 ├── app.js
 ├── package.json
 └── README.md
----
-
+```
 ---
 
 ## ⚙️ Technologies Used
@@ -147,6 +146,6 @@ Authorization: Bearer <your_token>
 
 For any issues, reach out to:
 **\[Somashekar]** – \[(mailto:somugowda.work@gmail.com)]
-GitHub: [github.com/somugowdasoft]
+GitHub: [https://github.com/somugowdasoft]
 
 ```
