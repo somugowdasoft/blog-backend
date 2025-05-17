@@ -16,11 +16,11 @@ This is the backend API for a full-stack Blogging Application built using **Node
 - ✅ Proper HTTP Status Codes and Error Handling
 
 ---
-
+```
 ## 📁 Project Structure
 
 ```
-```
+
 .
 ├── config/
 │   └── db.js
