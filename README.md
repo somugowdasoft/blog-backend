@@ -149,7 +149,7 @@ Authorization: Bearer <your_token>
 ## 📬 Contact
 
 For any issues, reach out to:
-**\[Somashekar]** – \[[your-email@example.com](mailto:somugowda.work@gmail.com)]
-GitHub: [github.com/your-username](https://github.com/somugowdasoft)
+**\[Somashekar]** – \[(mailto:somugowda.work@gmail.com)]
+GitHub: [github.com/somugowdasoft]
 
 ```
