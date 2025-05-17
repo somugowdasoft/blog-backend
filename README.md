@@ -1,5 +1,5 @@
 
-```markdown
+```
 # 📝 Blogging Application - Backend (MERN Stack)
 
 This is the backend API for a full-stack Blogging Application built using **Node.js**, **Express.js**, and **MongoDB (Atlas)**. It follows **MVC architecture**, uses **JWT** for authentication, and allows users to perform full **CRUD operations** on blog posts.
@@ -20,7 +20,7 @@ This is the backend API for a full-stack Blogging Application built using **Node
 ## 📁 Project Structure
 
 ```
-
+```
 .
 ├── config/
 │   └── db.js
