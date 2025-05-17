@@ -1,12 +1,11 @@
 
-```
 ---
 # 📝 Blogging Application - Backend (MERN Stack)
 
 This is the backend API for a full-stack Blogging Application built using **Node.js**, **Express.js**, and **MongoDB (Atlas)**. It follows **MVC architecture**, uses **JWT** for authentication, and allows users to perform full **CRUD operations** on blog posts.
 
 ---
-```
+---
 ## 🚀 Features
 
 - 👤 User Registration and Login (with JWT Auth)
@@ -17,10 +16,8 @@ This is the backend API for a full-stack Blogging Application built using **Node
 - ✅ Proper HTTP Status Codes and Error Handling
 
 ---
-```
-## 📁 Project Structure
 
-```
+## 📁 Project Structure
 
 .
 ├── config/
@@ -41,8 +38,7 @@ This is the backend API for a full-stack Blogging Application built using **Node
 ├── app.js
 ├── package.json
 └── README.md
-
-````
+---
 
 ---
 
