@@ -1,6 +1,6 @@
 const Blog = require('../models/Blog');
 
-// GET /blogs?category=&author=
+// get all blogs
 exports.getAllBlogs = async (req, res) => {
     try {
         const filter = {};
@@ -14,7 +14,34 @@ exports.getAllBlogs = async (req, res) => {
     }
 };
 
-// POST /blogs
+//get owner blogs
+exports.getMyBlogs = async (req, res) => {
+    try {
+        const userId = req.user.userId;
+        const blogs = await Blog.find({ userId }).sort({ createdAt: -1 });
+        res.status(200).json(blogs);
+    } catch (err) {
+        res.status(500).json({ msg: 'Failed to retrieve your blogs', error: err.message });
+    }
+};
+
+//get blog by id
+exports.getBlog = async (req, res) => {
+    try {
+        const blogId = req.params.id;
+        const blog = await Blog.findById(blogId);
+
+        if (!blog) {
+            return res.status(404).json({ msg: 'Blog not found' });
+        }
+
+        res.status(200).json(blog);
+    } catch (err) {
+        res.status(500).json({ msg: 'Failed to retrieve blog', error: err.message });
+    }
+};
+
+// create blogs
 exports.createBlog = async (req, res) => {
     try {
         const { title, category, content, image } = req.body;
@@ -31,7 +58,7 @@ exports.createBlog = async (req, res) => {
     }
 };
 
-// PUT /blogs/:id
+// update blogs
 exports.updateBlog = async (req, res) => {
     try {
         const blog = await Blog.findById(req.params.id);
@@ -47,7 +74,7 @@ exports.updateBlog = async (req, res) => {
     }
 };
 
-// DELETE /blogs/:id
+// Delete blogs
 exports.deleteBlog = async (req, res) => {
     try {
         const blog = await Blog.findById(req.params.id);
